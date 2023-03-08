@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerApi", "UrlShortenerApi\UrlShortenerApi.csproj", "{2ECF406C-CE1A-453A-ABB5-D9C8FDC39161}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerApi.Core", "UrlShortenerApi.Core\UrlShortenerApi.Core.csproj", "{38F902A7-E231-4CAC-B071-AE8E467152FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortenerApi.Models", "UrlShortenerApi.Models\UrlShortenerApi.Models.csproj", "{4E6E8E44-2E4F-4CB9-81E6-E77E6A0B7B44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2ECF406C-CE1A-453A-ABB5-D9C8FDC39161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ECF406C-CE1A-453A-ABB5-D9C8FDC39161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ECF406C-CE1A-453A-ABB5-D9C8FDC39161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F902A7-E231-4CAC-B071-AE8E467152FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F902A7-E231-4CAC-B071-AE8E467152FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F902A7-E231-4CAC-B071-AE8E467152FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F902A7-E231-4CAC-B071-AE8E467152FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6E8E44-2E4F-4CB9-81E6-E77E6A0B7B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6E8E44-2E4F-4CB9-81E6-E77E6A0B7B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6E8E44-2E4F-4CB9-81E6-E77E6A0B7B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6E8E44-2E4F-4CB9-81E6-E77E6A0B7B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

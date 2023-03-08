@@ -1,0 +1,17 @@
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Core.deps.json
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Core.runtimeconfig.json
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Core.dll
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Core.pdb
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Models.dll
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\bin\Debug\net7.0\UrlShortenerApi.Models.pdb
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.csproj.AssemblyReference.cache
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.AssemblyInfoInputs.cache
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.AssemblyInfo.cs
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.csproj.CopyComplete
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.dll
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\refint\UrlShortenerApi.Core.dll
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.pdb
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\UrlShortenerApi.Core.genruntimeconfig.cache
+C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Core\obj\Debug\net7.0\ref\UrlShortenerApi.Core.dll
