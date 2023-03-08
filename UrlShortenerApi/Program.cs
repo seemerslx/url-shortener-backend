@@ -1,12 +1,29 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Identity.Client;
+using System;
 using UrlShortenerApi.Core;
 using UrlShortenerApi.Core.Configurations;
+using UrlShortenerApi.Core.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(typeof(ParseBadRequest));
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(builderCors =>
+    {
+        builderCors.WithOrigins(builder.Configuration.GetValue<string>("front-url")).AllowAnyMethod().AllowAnyHeader().
+        WithExposedHeaders(new string[] { "totalAmountOfRecords" });
+    });
+});
 
 builder.Services.RegisterCoreDependencies(builder.Configuration);
 
@@ -20,7 +37,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors();
+
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
 

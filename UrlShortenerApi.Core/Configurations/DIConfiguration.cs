@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using UrlShortenerApi.Core.Interfaces;
 using UrlShortenerApi.Core.Services;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace UrlShortenerApi.Core.Configurations
 {
@@ -20,6 +22,7 @@ namespace UrlShortenerApi.Core.Configurations
 
             services.AddScoped<IUrlService, UrlService>();
             services.AddSingleton<IShortUrlGenerator, ShortUrlGenerator>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
     }
 }

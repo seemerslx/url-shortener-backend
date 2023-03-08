@@ -15,5 +15,9 @@ namespace UrlShortenerApi.Core.Interfaces
         Task<bool> CheckUrlExists(UrlRequest urlDTO);
 
         Task<UrlDTO> AddUrl(UrlRequest urlDTO, string randomSting);
+
+        Task<List<UrlDTO>> GetUrls(PaginationDTO paginationDTO);
+
+        Task<UrlDTO?> GetUrlById(Guid id);
     }
 }

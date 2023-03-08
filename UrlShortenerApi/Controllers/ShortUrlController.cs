@@ -38,10 +38,41 @@ namespace UrlShortenerApi.Controllers
             var randomString = shortUrlGenerator.GenereateShortUrl();
 
             var sUrl = await urlService.AddUrl(url, randomString);
-            
+
             var response = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{sUrl.ShortUrl}";
 
-            return Ok(new UrlResponse { Url = response});
+            return Ok(new UrlResponse { Url = response });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUrls([FromQuery] PaginationDTO paginationDTO)
+        {
+            var urls = await urlService.GetUrls(paginationDTO);
+            return Ok(urls);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUrlById(Guid id)
+        {
+            var url = await urlService.GetUrlById(id);
+
+            if (url != null)
+            {
+                return Ok(url);
+            }
+
+            return BadRequest("Url not found");
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemoveUrl(Guid id)
+        {
+            if (await urlService.RemoveUrl(id))
+            {
+                return NoContent();
+            }
+
+            return BadRequest("Url with such id not found");
         }
     }
 }
