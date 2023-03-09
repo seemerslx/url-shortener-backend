@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using UrlShortenerApi.Core.Helpers;
@@ -17,34 +19,47 @@ namespace UrlShortenerApi.Core.Services
     public class UrlService : IUrlService
     {
         private readonly ApplicationDbContext context;
+        private readonly UserManager<ApplicatonUser> userManager;
         private readonly IMapper mapper;
         private IHttpContextAccessor httpContext;
 
-        public UrlService(ApplicationDbContext context, IMapper mapper, IHttpContextAccessor httpContext)
+        public UrlService(ApplicationDbContext context,
+            IMapper mapper,
+            IHttpContextAccessor httpContext,
+            UserManager<ApplicatonUser> userManager)
         {
             this.context = context;
             this.mapper = mapper;
             this.httpContext = httpContext;
+            this.userManager = userManager;
         }
 
         public async Task<UrlDTO?> GetUrlById(Guid id)
         {
-            var url = await context.Urls.FirstOrDefaultAsync(x => x.Id == id);
+            var url = await context.Urls.Include(u => u.User).FirstOrDefaultAsync(x => x.Id == id);
 
             if (url == null)
             {
                 return null;
             }
+            var mapperUrl = mapper.Map<UrlDTO>(url);
 
-            return mapper.Map<UrlDTO>(url);
+            mapperUrl.CreatedBy = url.User.Email;
+
+            return mapperUrl;
         }
-        public async Task<UrlDTO> AddUrl(UrlRequest url, string randomString)
+
+        public async Task<UrlDTO> AddUrl(UrlRequest url, string randomString, string userEmail)
         {
+            var user = await userManager.FindByEmailAsync(userEmail);
+
             var sUrl = new UrlManegment()
             {
                 Id = Guid.NewGuid(),
                 Url = url.Url,
-                ShortUrl = randomString
+                ShortUrl = randomString,
+                CreatedAt = DateTime.Now,
+                User = user
             };
 
             await context.AddAsync(sUrl);
@@ -69,7 +84,7 @@ namespace UrlShortenerApi.Core.Services
 
             context.Urls.Remove(res);
             await context.SaveChangesAsync();
-            
+
             return true;
         }
 
@@ -80,6 +95,26 @@ namespace UrlShortenerApi.Core.Services
             var urls = await queriable.Paginate(paginationDTO).ToListAsync();
 
             return mapper.Map<List<UrlDTO>>(urls);
+        }
+
+        public async Task<bool> RemoveUrlWithCheckingCreator(Guid urlId, string email)
+        {
+            var user = await userManager.FindByEmailAsync(email);
+            if (user == null)
+                return false;
+
+            var res = await context.Urls.FirstOrDefaultAsync(x => x.Id == urlId);
+
+            if (res == null)
+                return false;
+
+            if (res.UserId != user.Id)
+                return false;
+
+            context.Urls.Remove(res);
+            await context.SaveChangesAsync();
+
+            return true;
         }
     }
 }

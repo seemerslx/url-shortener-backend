@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.2.5, )"
@@ -67,10 +71,6 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.3, )"
-            },
-            "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
               "version": "[7.0.3, )"
             }
@@ -176,6 +176,9 @@
             "projectReferences": {
               "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj": {
                 "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj"
+              },
+              "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
+                "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj"
               }
             }
           }
@@ -190,7 +193,15 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"
             },

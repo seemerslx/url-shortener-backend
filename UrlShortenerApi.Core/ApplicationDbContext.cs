@@ -1,18 +1,32 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UrlShortenerApi.Models;
 
 namespace UrlShortenerApi.Core
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicatonUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opts) : base(opts) {}
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opts) : base(opts) { }
 
         public DbSet<UrlManegment> Urls { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<UrlManegment>()
+                .HasOne(x => x.User)
+                .WithMany(u => u.Urls)
+            .HasForeignKey(x => x.UserId);
+
+            builder.Entity<UrlManegment>()
+                .HasIndex(b => b.Url)
+                .IsUnique();
+
+            builder.Entity<UrlManegment>()
+                .HasIndex(b => b.ShortUrl)
+                .IsUnique();
+
+
+            base.OnModelCreating(builder);
+        }
     }
 }
