@@ -10,3 +10,15 @@ C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Models\obj\Debug\net7.0\Ur
 C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Models\obj\Debug\net7.0\refint\UrlShortenerApi.Models.dll
 C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.pdb
 C:\Users\Alex\Desktop\UrlShortenerApi\UrlShortenerApi.Models\obj\Debug\net7.0\ref\UrlShortenerApi.Models.dll
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\bin\Debug\net7.0\UrlShortenerApi.Models.deps.json
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\bin\Debug\net7.0\UrlShortenerApi.Models.dll
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\bin\Debug\net7.0\UrlShortenerApi.Models.pdb
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.csproj.AssemblyReference.cache
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.AssemblyInfoInputs.cache
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.AssemblyInfo.cs
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.dll
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\refint\UrlShortenerApi.Models.dll
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\UrlShortenerApi.Models.pdb
+C:\Users\Alex\Desktop\test\url-shortener-backend\UrlShortenerApi.Models\obj\Debug\net7.0\ref\UrlShortenerApi.Models.dll

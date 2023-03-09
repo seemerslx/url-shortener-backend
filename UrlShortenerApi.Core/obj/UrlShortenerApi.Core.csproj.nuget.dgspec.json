@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj": {}
+    "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj": {
+    "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
         "projectName": "UrlShortenerApi.Core",
-        "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
+        "projectPath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Core\\obj\\",
+        "outputPath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
-                "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj"
+              "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
+                "projectPath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
+    "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
         "projectName": "UrlShortenerApi.Models",
-        "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
+        "projectPath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\obj\\",
+        "outputPath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",

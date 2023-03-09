@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4egtIlOdlTbzhUWw2jzUsx2+OA14E3k/CXt6pUCTFowtFC2guZz1zgRN6oFwJfKI3rgu9WqMuUbp7m4g7SjD5Q==",
+  "dgSpecHash": "ewbaFCy3gSdgVz5IPv1GifkxyRlu7Xx5B+74XwQpQEaaCbrRea14mn6nEzop7/veIkp4S/qSdOrs5WRw60Gnww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Desktop\\UrlShortenerApi\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\Desktop\\test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
