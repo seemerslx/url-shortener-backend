@@ -25,9 +25,9 @@ namespace UrlShortenerApi.Core.Filters
             {
                 var response = new List<string>();
                 var badRequestObjectResult = context.Result as BadRequestObjectResult;
-                if (badRequestObjectResult.Value is string)
+                if (badRequestObjectResult!.Value is string)
                 {
-                    response.Add(badRequestObjectResult.Value.ToString());
+                    response.Add(badRequestObjectResult.Value.ToString()!);
                 }
                 else if (badRequestObjectResult.Value is IEnumerable<IdentityError> errors)
                 {

@@ -8,7 +8,7 @@ using UrlShortenerApi.Models;
 
 namespace UrlShortenerApi.Core
 {
-    public class ApplicatonUser : IdentityUser
+    public class ApplicationUser : IdentityUser
     {
         public ICollection<UrlManegment> Urls { get; set; } = null!;
     }

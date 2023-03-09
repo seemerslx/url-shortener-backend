@@ -21,26 +21,21 @@ namespace UrlShortenerApi.Controllers
     {
         private readonly IShortUrlGenerator shortUrlGenerator;
         private readonly IUrlService urlService;
-        private readonly UserManager<ApplicatonUser> userManager;
 
         public ShortUrlController(IShortUrlGenerator shortUrlGenerator,
-            IUrlService urlService,
-            UserManager<ApplicatonUser> userManager)
+            IUrlService urlService)
         {
             this.shortUrlGenerator = shortUrlGenerator;
             this.urlService = urlService;
-            this.userManager = userManager;
         }
 
         [HttpPost]
         public async Task<IActionResult> ShortUrl(UrlRequest url)
         {
-
             if (!Uri.TryCreate(url.Url, UriKind.Absolute, out var inputUrl))
             {
                 return BadRequest("Invalid Url has been provided");
             }
-
 
             if (await urlService.CheckUrlExists(url))
             {
@@ -51,7 +46,7 @@ namespace UrlShortenerApi.Controllers
 
             var randomString = shortUrlGenerator.GenereateShortUrl();
 
-            var sUrl = await urlService.AddUrl(url, randomString, email.Value);
+            var sUrl = await urlService.AddUrl(url, randomString, email!.Value);
 
             var response = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{sUrl.ShortUrl}";
 
@@ -79,11 +74,6 @@ namespace UrlShortenerApi.Controllers
             return BadRequest("Url not found");
         }
 
-        /*
-            delete records created by themselves (URLs should be unique).
-            Admin users can add new records("Add new Url" section) and view(redirects to the Short
-            URL Info view), delete all existing records. Anonymous users can only see this table.
-         */
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveUrl(Guid id)
         {
@@ -105,7 +95,7 @@ namespace UrlShortenerApi.Controllers
                 {
                     var email = HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimsConstants.Email);
 
-                    if (await urlService.RemoveUrlWithCheckingCreator(id, email.Value))
+                    if (await urlService.RemoveUrlWithCheckingCreator(id, email!.Value))
                     {
                         return NoContent();
                     }

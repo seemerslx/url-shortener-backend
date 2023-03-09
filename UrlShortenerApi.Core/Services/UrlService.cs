@@ -2,13 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using UrlShortenerApi.Core.Helpers;
 using UrlShortenerApi.Core.Interfaces;
 using UrlShortenerApi.Models;
@@ -19,14 +12,14 @@ namespace UrlShortenerApi.Core.Services
     public class UrlService : IUrlService
     {
         private readonly ApplicationDbContext context;
-        private readonly UserManager<ApplicatonUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly IMapper mapper;
         private IHttpContextAccessor httpContext;
 
         public UrlService(ApplicationDbContext context,
             IMapper mapper,
             IHttpContextAccessor httpContext,
-            UserManager<ApplicatonUser> userManager)
+            UserManager<ApplicationUser> userManager)
         {
             this.context = context;
             this.mapper = mapper;
@@ -44,7 +37,7 @@ namespace UrlShortenerApi.Core.Services
             }
             var mapperUrl = mapper.Map<UrlDTO>(url);
 
-            mapperUrl.CreatedBy = url.User.Email;
+            mapperUrl.CreatedBy = url.User.Email!;
 
             return mapperUrl;
         }
@@ -59,7 +52,7 @@ namespace UrlShortenerApi.Core.Services
                 Url = url.Url,
                 ShortUrl = randomString,
                 CreatedAt = DateTime.Now,
-                User = user
+                User = user!
             };
 
             await context.AddAsync(sUrl);

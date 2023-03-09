@@ -4,7 +4,7 @@ using System;
 
 namespace UrlShortenerApi.Core
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicatonUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opts) : base(opts) { }
 

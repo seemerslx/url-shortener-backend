@@ -15,9 +15,9 @@ namespace UrlShortenerApi.Core.Services
 {
     public class TokenBuilder : ITokenBuilder
     {
-        private readonly UserManager<ApplicatonUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public TokenBuilder(UserManager<ApplicatonUser> userManager)
+        public TokenBuilder(UserManager<ApplicationUser> userManager)
         {
             this.userManager = userManager;
         }

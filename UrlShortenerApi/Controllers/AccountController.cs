@@ -1,14 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using UrlShortenerApi.Core;
+﻿using Microsoft.AspNetCore.Mvc;
 using UrlShortenerApi.Core.Configurations;
 using UrlShortenerApi.Core.Interfaces;
-using UrlShortenerApi.Core.Services;
 using UrlShortenerApi.Models.DTO_s;
-using System.Security.Claims;
-using UrlShortenerApi.Core.Constants;
+using UrlShortenerApi.Core.Exceptions;
+using Microsoft.Extensions.Options;
 
 namespace UrlShortenerApi.Controllers
 {
@@ -16,49 +11,31 @@ namespace UrlShortenerApi.Controllers
     [Route("api/accounts")]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<ApplicatonUser> userManager;
-        private readonly SignInManager<ApplicatonUser> signInManager;
-        private readonly ApplicationDbContext context;
         private readonly JWTConfiguration jWTConfiguration;
-        private readonly ITokenBuilder tokenBuilder;
+        private readonly IAuthService authService;
 
-        public AccountController(UserManager<ApplicatonUser> userManager,
-            SignInManager<ApplicatonUser> signInManager,
-             IOptions<JWTConfiguration> options,
-             ITokenBuilder tokenBuilder,
-             ApplicationDbContext context)
+        public AccountController(IOptions<JWTConfiguration> options, IAuthService authService)
         {
-            this.userManager = userManager;
-            this.signInManager = signInManager;
             this.jWTConfiguration = options.Value;
-            this.tokenBuilder = tokenBuilder;
-            this.context = context;
+            this.authService = authService;
         }
 
         [HttpPost("register")]
         public async Task<ActionResult<AuthenticationResponse>> Register(
             [FromBody] RegisterRequest registerCredentionals)
         {
-            // checks for existing email
-            if (await context.Users.AnyAsync(x => (x.Email == registerCredentionals.Email)))
+            try
             {
-                return BadRequest("This email already registered");
+                return await authService.RegisterUser(registerCredentionals, jWTConfiguration);
             }
-
-            var user = new ApplicatonUser { UserName = registerCredentionals.Username, Email = registerCredentionals.Email };
-
-            // if username exists here will be thrown error and handlaed in my filter
-            var result = await userManager.CreateAsync(user, registerCredentionals.Password);
-
-
-            if (result.Succeeded)
+            catch (Exception ex)
             {
-                await userManager.AddClaimAsync(user, new Claim(ClaimsConstants.Role, RolesConstants.User));
-                return await tokenBuilder.BuildToken(registerCredentionals, jWTConfiguration);
-            }
-            else
-            {
-                return BadRequest(result.Errors);
+                if (ex is IdentityException identityException)
+                {
+                    return BadRequest(identityException.Errors);
+                }
+
+                return BadRequest(ex.Message);
             }
         }
 
@@ -66,24 +43,13 @@ namespace UrlShortenerApi.Controllers
         public async Task<ActionResult<AuthenticationResponse>> Login(
             LoginRequest loginCredentionals)
         {
-            ApplicatonUser? signedUser = await userManager.FindByEmailAsync(loginCredentionals.Email);
-            if (signedUser == null)
+            try
             {
-                return BadRequest("User not registerd!");
+                return await authService.LoginUser(loginCredentionals, jWTConfiguration);
             }
-
-            var result = await signInManager.PasswordSignInAsync(signedUser.UserName,
-                loginCredentionals.Password, 
-                isPersistent: false,
-                lockoutOnFailure: false);
-
-            if (result.Succeeded)
+            catch (Exception ex)
             {
-                return await tokenBuilder.BuildToken(loginCredentionals, jWTConfiguration);
-            }
-            else
-            {
-                return BadRequest("Invalid credentionals");
+                return BadRequest(ex.Message);
             }
         }
 
