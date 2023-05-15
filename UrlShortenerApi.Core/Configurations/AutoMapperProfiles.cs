@@ -17,12 +17,6 @@ namespace UrlShortenerApi.Core.Configurations
                     .ForMember(dest => dest.ShortUrl, opt => opt.MapFrom<ShortUrlResolver>());
         }
 
-
-
-        
-
-
-
     }
 
     public class ShortUrlResolver : IValueResolver<UrlManegment, UrlDTO, string>
