@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xIMCm7ZoHcgKI4r5erIn/hTQWj7t3vm/hQnbitgDfP5NT9TKNHMldwTVlGxbZKktTd8QOWCyityOJ+rrHz6L6w==",
+  "dgSpecHash": "hAAxGJdX9/I9hbcHW3d06mpVBaDJMOBum0/UxO1dqdQIy4t+JMdllsl06+kP5Tk8ESwRhPcbH2Bdf5fs2oKTKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.3\\microsoft.aspnetcore.cryptography.internal.7.0.3.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.3\\microsoft.aspnetcore.cryptography.keyderivation.7.0.3.nupkg.sha512",

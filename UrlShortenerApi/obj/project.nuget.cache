@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJb8DJd9BYHp25K7yB0pwW0U425h8VEypBRdXKfs6T8wz7apZ3E12oWYkChAmNWgFqcA3X1l3EGDMnwPD4WEcA==",
+  "dgSpecHash": "mtgDwQHPUnQtc269l5HQfYD5QzdLwyfHxwMCRzY7/kF6Vy0awYTj4cC+IriJ5bykzsBpBl+KWvZsDrwfoJ4txQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi\\UrlShortenerApi.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi\\UrlShortenerApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Alex\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
