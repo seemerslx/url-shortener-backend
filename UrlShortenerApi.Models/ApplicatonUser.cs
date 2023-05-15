@@ -11,5 +11,7 @@ namespace UrlShortenerApi.Core
     public class ApplicationUser : IdentityUser
     {
         public ICollection<UrlManegment> Urls { get; set; } = null!;
+
+
     }
 }
