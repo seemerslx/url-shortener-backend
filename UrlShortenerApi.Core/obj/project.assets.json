@@ -4622,11 +4622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
       "projectName": "UrlShortenerApi.Core",
-      "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
+      "projectPath": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Core\\UrlShortenerApi.Core.csproj",
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Core\\obj\\",
+      "outputPath": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4643,8 +4643,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
-              "projectPath": "C:\\Users\\Alex\\Desktop\\UrlShortApi\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj"
+            "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj": {
+              "projectPath": "C:\\Users\\Alex\\Desktop\\Test\\url-shortener-backend\\UrlShortenerApi.Models\\UrlShortenerApi.Models.csproj"
             }
           }
         }
@@ -4710,7 +4710,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
