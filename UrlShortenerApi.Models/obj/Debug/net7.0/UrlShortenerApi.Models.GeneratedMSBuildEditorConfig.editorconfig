@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UrlShortenerApi.Models
-build_property.ProjectDir = C:\Users\Alex\Desktop\Test\url-shortener-backend\UrlShortenerApi.Models\
+build_property.ProjectDir = C:\Users\Alex\Desktop\UrlShortApi\url-shortener-backend\UrlShortenerApi.Models\
