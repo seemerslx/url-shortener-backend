@@ -20,14 +20,6 @@ namespace UrlShortenerApi.Core.Filters
                 return;
             }
 
-
-
-
-
-
-
-
-
             var statusCode = result.StatusCode;
             if (statusCode == 400)
             {
