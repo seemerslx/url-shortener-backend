@@ -37,9 +37,6 @@ namespace UrlShortenerApi.Controllers
                 return BadRequest("Invalid Url has been provided");
             }
 
-
-            Console.WriteLine("Hello world");
-
             if (await urlService.CheckUrlExists(url))
             {
                 return BadRequest("Such Url already exists");
