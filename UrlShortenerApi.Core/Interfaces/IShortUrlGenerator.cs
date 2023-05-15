@@ -8,6 +8,9 @@ namespace UrlShortenerApi.Core.Interfaces
 {
     public interface IShortUrlGenerator
     {
+
+
+
         string GenereateShortUrl();
     }
 }
