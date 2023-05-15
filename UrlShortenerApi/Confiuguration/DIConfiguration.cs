@@ -98,6 +98,10 @@ namespace UrlShortenerApi.Confiuguration
                     WithExposedHeaders(new string[] { "totalAmountOfRecords" });
                 });
             });
+
+            Console.WriteLine("HShdhsd");
+            Console.WriteLine("HShdhshsdh");
+            Console.WriteLine("SKdsjdksjdskdjskdjsdk");
         }
 
         public static void RegisterCoreConfiguration(this IServiceCollection services, IConfigurationRoot configuration)
