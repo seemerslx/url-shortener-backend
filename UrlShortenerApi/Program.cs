@@ -28,6 +28,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+Console.WriteLine("Herer");
+Console.WriteLine("sadasdsada");
+
 app.UseHttpsRedirection();
 
 app.UseCors();
